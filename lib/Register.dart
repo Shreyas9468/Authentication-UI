@@ -21,17 +21,12 @@ class _RegisterState extends State<Register> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextField(
-                onChanged: (value) {
-                  email = value;
-                },
-                decoration: InputDecoration(
+                 decoration: InputDecoration(
                   hintText: 'enter email',
                 ),
               ),
               TextField(
-                onChanged: (value) {
-                  password = value;
-                },
+                
                 decoration: InputDecoration(
                   hintText: 'enter password',
                 ),
