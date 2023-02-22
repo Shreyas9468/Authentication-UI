@@ -21,15 +21,11 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextField(
-                onChanged: (value) {
-                  email = value;
-                },
+                
                 decoration: InputDecoration(hintText: 'email'),
               ),
               TextField(
-                onChanged: (value) {
-                  password = value;
-                },
+               
                 decoration: InputDecoration(hintText: 'password'),
                 //obscureText: true,
               ),
