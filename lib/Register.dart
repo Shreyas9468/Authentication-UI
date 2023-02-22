@@ -12,7 +12,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
-    String email = "", password = "";
+   
     return MaterialApp(
       home: Scaffold(
         body: Center(
@@ -36,22 +36,8 @@ class _RegisterState extends State<Register> {
                   hintText: 'enter password',
                 ),
               ),
-              ElevatedButton(onPressed: ()async {
-                try {
-                  final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-                    email: email,
-                    password: password,
-                  );
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>new Final()),);
-                } on FirebaseAuthException catch (e) {
-                  if (e.code == 'weak-password') {
-                    print('The password provided is too weak.');
-                  } else if (e.code == 'email-already-in-use') {
-                    print('The account already exists for that email.');
-                  }
-                } catch (e) {
-                  print(e);
-                }
+              ElevatedButton(onPressed: (){
+                
               }, child: Text('Register')),
 
             ],
