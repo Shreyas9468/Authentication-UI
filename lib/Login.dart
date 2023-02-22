@@ -13,7 +13,6 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-   String email = "", password = "";
     return MaterialApp(
       home: Scaffold(
         body: Center(
@@ -35,19 +34,8 @@ class _LoginState extends State<Login> {
                 //obscureText: true,
               ),
               ElevatedButton(
-                  onPressed: () async {
-                    try {
-                      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-                          email: email,
-                          password: password
-                      );
-                    } on FirebaseAuthException catch (e) {
-                      if (e.code == 'user-not-found') {
-                        print('No user found for that email.');
-                      } else if (e.code == 'wrong-password') {
-                        print('Wrong password provided for that user.');
-                      }
-                    }
+                  onPressed: (){
+                   
                   },
                   child: Text('Click to login')),
               Text('Not have an Account'),
