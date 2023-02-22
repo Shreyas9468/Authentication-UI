@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:teach2/Login.dart';
 
+import 'Register.dart';
+
 class First extends StatefulWidget {
   const First({Key? key}) : super(key: key);
 
@@ -27,9 +29,14 @@ class _FirstState extends State<First> {
                   );
                 },
                 child: Text("Login")),
-            ElevatedButton(onPressed: () {
-
-            }, child: Text("Register")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => new Register()),
+                  );
+                },
+                child: Text("Register")),
           ],
         )),
       ),
